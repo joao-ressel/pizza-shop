@@ -1,10 +1,12 @@
-import { Button } from './components/ui/button'
-function App() {
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+import {Helmet, HelmetProvider} from "react-helmet-async"
+export function App() {
   return (
-    <>
-      <Button>Enviar</Button>
-    </>
+    <HelmetProvider>
+      <Helmet titleTemplate="%s | pizza-shop"/>
+
+      <RouterProvider router={router} />;
+    </HelmetProvider>
   )
 }
-
-export default App
