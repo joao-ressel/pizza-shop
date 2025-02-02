@@ -111,7 +111,7 @@ export function OrderTableFilters() {
               <SelectContent>
                 <SelectItem value="all">Todos</SelectItem>
                 <SelectItem value="pending">Pendente</SelectItem>
-                <SelectItem value="cancelled">Cancelado</SelectItem>
+                <SelectItem value="canceled">Cancelado</SelectItem>
                 <SelectItem value="precessing">Em preparo</SelectItem>
                 <SelectItem value="delivering">Em entrega</SelectItem>
                 <SelectItem value="deliverid">Entregue</SelectItem>
