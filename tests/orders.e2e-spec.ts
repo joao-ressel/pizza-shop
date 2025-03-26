@@ -91,11 +91,7 @@ test("filter orders by status", async ({ page }) => {
   await page.getByRole("option", { name: "Pendente" }).click();
   await page.getByRole("button", { name: "Filtrar resultados" }).click();
 
-  await page.waitForSelector('table tbody tr:has-text("Pendente")', {
-    state: "visible",
-  });
-
-  await page.waitForTimeout(3000); // Tempo curto para aguardar renderização
-  const tableRows = page.locator('table tbody tr:has-text("Pendente")');
-  expect(await tableRows.count()).toBe(10);
+  await expect(
+    page.getByRole("cell", { name: "Pendente"})
+  ).toHaveCount(10);
 });
